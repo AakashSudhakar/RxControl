@@ -1,3 +1,8 @@
+
+const models = require('../db/models');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('../auth.js');
+
 module.exports = function (app) {
     //Index
     app.get('/pharmacy-dashboard', function (req, res) {
