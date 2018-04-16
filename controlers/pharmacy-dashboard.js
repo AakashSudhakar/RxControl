@@ -8,7 +8,7 @@ module.exports = function (app) {
     app.get('/pharmacy-dashboard', function (req, res) {
          // res.render('pharmacy/:id/dashboard', {});
          res.send('Pharmacy Dashboard');
-     });
+    });
 
     /*****************************************
     * Pharmacy Dashboard Routes
