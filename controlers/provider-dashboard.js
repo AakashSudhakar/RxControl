@@ -12,13 +12,13 @@ module.exports = function (app) {
      });
 
     /*****************************************
-    * Pharmacy Dashboard Routes
+    * Provider Dashboard Routes
     *****************************************/
 
-    // SHOW
+    // SHOW ALL
     app.get('/provider/:id/dashboard', (req, res) => {
-        db.Pharmacy.findAll({ where: { include: [db.Patient] } }).then((pharmacy) => {
-            res.json(pharmacy);
+        db.Provider.findAll({ where: { include: [db.Patient] } }).then((provider) => {
+            res.json(provider);
         })
     });
 };

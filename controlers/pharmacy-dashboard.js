@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('../auth.js');
 
 module.exports = function (app) {
-    //Index
+    // Index
     app.get('/pharmacy-dashboard', function (req, res) {
          // res.render('pharmacy/:id/dashboard', {});
          res.send('Pharmacy Dashboard');
@@ -14,7 +14,7 @@ module.exports = function (app) {
     * Pharmacy Dashboard Routes
     *****************************************/
 
-    // SHOW
+    // SHOW ALL
     app.get('/pharmacy/:id/dashboard', (req, res) => {
         db.Pharmacy.findAll({ where: { include: [db.Patient] } }).then((pharmacy) => {
             res.json(pharmacy);
